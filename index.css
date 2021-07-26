@@ -1,0 +1,242 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /*d-width: 38rem;*/
+  /*padding: 2rem;*/
+  background-color: white;
+  margin: 0;
+}
+
+#startup {
+  position: fixed;
+  top: 100%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%,-50%);
+  animation: startup forwards 1s;
+  opacity: 0;
+
+  color: aquamarine;
+}
+
+#startup img {
+  width: 20%;
+}
+
+@keyframes startup {
+  to {
+    opacity: 1;
+    top: 50%;
+  }
+}
+
+#app {
+  padding: 100px 0 60px 0;
+  display: none;
+  background-color: whitesmoke;
+  height: 100%;
+}
+
+:not(input):not(textarea),
+:not(input):not(textarea)::after,
+:not(input):not(textarea)::before {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+input, button, textarea, :focus {
+    outline: none;
+}
+
+.menu {
+  display: inline-flex;
+  position: fixed;
+  height: 40px;
+  width: 100%;
+  background-color: white;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  box-shadow: 0px 0px 15px lightgray;
+}
+
+.menu p {
+  position: relative;
+  text-align: center;
+  line-height: 30px;
+  top: 5px;
+  border-radius: 5px;
+  margin: 0;
+  background-color: whitesmoke;
+  padding: 0 5px;
+  height: 30px;
+  margin-left: 5px;
+  width: 50px;
+
+  box-shadow: 0px 0px 5px lightgray;
+  transition: 0.2s;
+}
+
+.menu p:hover {
+  background-color: orangered;
+}
+
+.page {
+  cursor: crosshair;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 0;
+
+  background-color: white;
+  box-shadow: 0px 0px 15px lightgray;
+}
+
+.pencil {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 10px;
+  width: 40px;
+  text-align: center;
+  transform: translate(0px,-50%);
+
+  background-color: white;
+  border-radius: 99999px;
+  box-shadow: 0px 0px 15px lightgray;
+}
+
+.pencil p {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  border: none;
+  background-color: transparent;
+  border-radius: 999px;
+  width: 20px;
+  height: 20px;
+  color: transparent;
+}
+
+.pencil svg {
+  width: 20px;
+  height: 20px;
+  padding-bottom: 10px;
+}
+
+.shape {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 10px;
+  text-align: center;
+  transform: translate(0px,-50%);
+
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px lightgray;
+
+  width: 150px;
+  height: 300px;
+}
+
+.selected {
+  animation: selected 0s forwards;
+}
+
+@keyframes selected {
+  100% {
+    border: solid black 1px;
+  }
+}
+
+#red { background-color: red; }
+#black { background-color: black; }
+#blue { background-color: blue; }
+#green { background-color: green; }
+#white { background-color: ghostwhite; color: red;}
+
+#width-div {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: white;
+  width: 25px;
+  border-radius: 99999px;
+  box-shadow: 0px 0px 5px lightgray;
+}
+
+#width-div button {
+  color: black;
+  border: none;
+  padding: 5px;
+  background-color: transparent;
+  border-radius: 999999px;
+}
+
+#history {
+  position: fixed;
+  float: right;
+  height: 500px;
+  width: 200px;
+  right: 10px;
+  top: 50%;
+  transform: translate(0px,-50%);
+  background-color: white;
+  z-index: 200;
+  box-shadow: 0px 0px 15px lightgray;
+  overflow: hidden;
+}
+
+#history-list {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  text-align: left;
+}
+
+#history-title {
+  position: absolute;
+  top: -15px;
+  padding: 5px;
+  font-size: 20px;
+  text-align: left;
+  background-color: white;
+  width: 100%;
+  height: 30px;
+  box-shadow: 0px 0px 15px lightgray;
+  z-index: 210;
+}
+
+#history ul {
+  width: 100%;
+  top: 25px;
+  position: relative;
+  float: left;
+  padding: 0;
+}
+
+#history li {
+  margin: 0;
+  padding: 0 0 0 20px;
+  height: 20px;
+  left: 0;
+  float: left;
+  width: 100%;
+}
+
+#history li:hover {
+  background-color: rgb(235,235,235);
+}
+
+.history-style {
+  padding: 5px;
+  border-radius: 9999px;
+  transform: translate(10px,-10px);
+}
+
+.history-style2 {
+  transform: translate(15px,-16px);
+}
