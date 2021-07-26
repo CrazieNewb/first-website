@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-  <h1> THis is my website</h1>
-	<div class="shadow">
-		<div class="inside">
-			<p>Text</p>
-		</div>
-	</div>
-</body>
+  <head>
+    <script src="jquery.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div id="startup">
+      <img src="logo.png">
+    </div>
+    <div id="app">
+      <div class="menu">
+        <p id="pencil" onclick="selectTool(1)">Pencil</p>
+        <p id="shape" onclick="selectTool(2)">Shape</p>
+        <p>???</p>
+        <p>???</p>
+        <p>???</p>
+        <p>???</p>
+      </div>
+      <div class="pencil">
+        <p id="black" onclick="selectCol('black')"></p>
+        <p id="red" onclick="selectCol('red')"></p>
+        <p id="green" onclick="selectCol('green')"></p>
+        <p id="blue" onclick="selectCol('blue')"></p>
+        <p id="white" onclick="selectCol('white')">X</p>
+        <div id="width-div">
+          <p id="up" onclick="widthUp()"><button>+</button></p>
+          <p id="width" style="color: black;">50</p>
+          <p id="down" onclick="widthDown()"><button>-</button></p>
+        </div>
+          <?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.88 95.95" style="enable-background:new 0 0 122.88 95.95" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;}</style><g><path class="st0" d="M8.94,0h105c4.92,0,8.94,4.02,8.94,8.94l0,0c0,4.92-4.02,8.94-8.94,8.94h-105C4.02,17.88,0,13.86,0,8.94l0,0 C0,4.02,4.02,0,8.94,0L8.94,0z M8.94,78.07h105c4.92,0,8.94,4.02,8.94,8.94l0,0c0,4.92-4.02,8.94-8.94,8.94h-105 C4.02,95.95,0,91.93,0,87.01l0,0C0,82.09,4.02,78.07,8.94,78.07L8.94,78.07z M8.94,39.03h105c4.92,0,8.94,4.02,8.94,8.94l0,0 c0,4.92-4.02,8.94-8.94,8.94h-105C4.02,56.91,0,52.89,0,47.97l0,0C0,43.06,4.02,39.03,8.94,39.03L8.94,39.03z"/></g></svg>
+      </div>
+
+      <div class="shape">
+        <p>Not finished</p>
+      </div>
+
+      <div id="history" align="right">
+        <h1 id="history-title">History<p onclick="save()"></p></h1>
+        <div id="history-list">
+          <ul id="list"></ul>
+        </div>
+      </div>
+
+      <canvas class="page" width="2100" height="2970"></canvas>
+    </div>
+    <script src="render.js"></script>
+  </body>
 </html>
